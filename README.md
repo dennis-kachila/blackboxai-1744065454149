@@ -84,7 +84,6 @@ makaazi/
 ├── scripts/                     
 │   ├── scripts-final.js         # JavaScript for dynamic content handling
 │   ├── sqlite-server-fixed.js    # Node.js server for handling requests
-│   ├── db-helper.js              # Database helper methods
 │
 ├── data.json                    # Sample data for properties and counties
 ├── package.json                  # Node.js dependencies
