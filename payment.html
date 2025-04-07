@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Makaazi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Makaazi</h1>
+            <div class="space-x-4">
+                <a href="index.html" class="hover:text-blue-200">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4 max-w-md">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-center mb-6">Complete Your Payment</h2>
+            
+            <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+                <h3 class="font-semibold mb-2">Booking Summary</h3>
+                <p id="paymentHouseType" class="mb-1">House Type: </p>
+                <p id="paymentDeposit" class="mb-1">Deposit: </p>
+                <p id="paymentMonthly" class="mb-1">Monthly Rent: </p>
+            </div>
+
+            <form id="paymentForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Payment Method</label>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <input id="mpesa" name="paymentMethod" type="radio" value="mpesa" checked 
+                                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                            <label for="mpesa" class="ml-2 block text-sm text-gray-700">
+                                M-Pesa
+                            </label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="bank" name="paymentMethod" type="radio" value="bank" 
+                                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                            <label for="bank" class="ml-2 block text-sm text-gray-700">
+                                Bank Transfer
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mpesaDetails">
+                    <div>
+                        <label for="phoneNumber" class="block text-sm font-medium text-gray-700">M-Pesa Phone Number</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border">
+                    </div>
+                </div>
+
+                <div id="bankDetails" class="hidden">
+                    <div>
+                        <label for="accountNumber" class="block text-sm font-medium text-gray-700">Account Number</label>
+                        <input type="text" id="accountNumber" name="accountNumber"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border">
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Complete Payment
+                    </button>
+                </div>
+            </form>
+
+            <div id="receiptSection" class="hidden mt-6 p-4 bg-green-50 rounded-lg">
+                <h3 class="font-semibold text-green-800 mb-2">Payment Successful!</h3>
+                <p class="text-green-700 mb-4">Your receipt has been generated.</p>
+                <button id="downloadReceipt" 
+                    class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                    Download Receipt
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
