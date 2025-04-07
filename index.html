@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makaazi - Find Your Dream Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Makaazi</h1>
+            <div class="space-x-4">
+                <a href="register.html" class="hover:text-blue-200">Register</a>
+                <a href="login.html" class="hover:text-blue-200">Login</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto p-4">
+        <!-- Hero Section -->
+        <section class="hero bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl p-12 mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Find Your Dream Home in Kenya</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Discover quality houses across all 47 counties with transparent pricing and easy booking</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="counties.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-100 transition transform hover:scale-105">
+                    Browse Properties <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="register.html" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition">
+                    Join Makaazi
+                </a>
+            </div>
+        </section>
+        <!-- Features Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose Makaazi?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Nationwide Coverage</h3>
+                    <p class="text-gray-600">Find properties in all 47 counties with detailed location information.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Transparent Pricing</h3>
+                    <p class="text-gray-600">No hidden fees. See exact deposit and monthly rent amounts upfront.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Secure Booking</h3>
+                    <p class="text-gray-600">30-day reservation period with multiple payment options.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Properties -->
+        <section class="mb-16">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Featured Properties</h2>
+                <a href="counties.html" class="text-blue-600 hover:underline">View All</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="featuredProperties">
+                <!-- Properties will be loaded dynamically -->
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="bg-gray-50 p-12 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">James Mwangi</h4>
+                            <p class="text-gray-500 text-sm">Nairobi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Found my perfect apartment in Karen within 2 days. The booking process was seamless!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Mombasa</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The M-Pesa payment option made everything so convenient. Highly recommended!"</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
